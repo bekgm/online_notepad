@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Онлайн Блокнот</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Онлайн Блокнот</h1>
+    <div class="toolbar">
+        <select id="fontSelector" title="Выбор шрифта">
+          <option value="Arial">Arial</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Tahoma">Tahoma</option>
+          <option value="Verdana">Verdana</option>
+        </select>
+      
+        <select id="fontSizeSelector" title="Размер текста">
+          <option value="14px">14px</option>
+          <option value="16px" selected>16px</option>
+          <option value="18px">18px</option>
+          <option value="20px">20px</option>
+          <option value="24px">24px</option>
+        </select>
+      
+        <button onclick="formatText('bold')" title="Жирный"><b>Ж</b></button>
+        <button onclick="formatText('italic')" title="Курсив"><i>К</i></button>
+        <button onclick="formatText('underline')" title="Подчёркнутый"><u>П</u></button>
+        <button onclick="formatText('line-through')" title="Зачёркнутый"><s>З</s></button>
+        <button onclick="toggleDarkMode()" title="Тёмная тема">🌙/☀️</button>
+      </div>
+      
+
+    <div id="editor" contenteditable="true"></div>
+
+    <div class="buttons">
+      <button onclick="clearNote()">🗑 Очистить</button>
+    </div>
+
+    <p class="info">Текст сохраняется автоматически в браузере</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
